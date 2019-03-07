@@ -13,6 +13,8 @@ class _secondState1 extends State<second1> {
   Widget build(BuildContext context) {
     List<Widget> addWidgetInside = List.generate(count, (int i) => addAll(i));
 
+    var query = MediaQuery.of(context).size;
+
     void sss() {
       //print("click");
       setState(() {
@@ -29,14 +31,70 @@ class _secondState1 extends State<second1> {
         body: Column(
           children: <Widget>[
             RaisedButton(
-              onPressed: () {
-                sss();
-              },
-              child: Text("Add"),
+              onPressed: () {},
+              child: Text("Add Widget"),
             ),
-            Expanded(
+            Container(
+              color: Colors.redAccent,
+              height: query.height - 100,
               child: ListView(
-                children: addWidgetInside,
+                scrollDirection: Axis.vertical,
+                children: <Widget>[
+                  Text("AAAAA"),
+                  Text("AAAAA"),
+                  Text("AAAAA"),
+                  Text("AAAAA"),
+                  Text("AAAAA"),
+                  Text("AAAAA"),
+                  Text("AAAAA"),
+                  Text("AAAAA"),
+                  Text("AAAAA"),
+                  Text("AAAAA"),
+                  Text("AAAAA"),
+                  Text("AAAAA"),
+                  Text("AAAAA"),
+                  Text("AAAAA"),
+                  Text("AAAAA"),
+                  Text("AAAAA"),
+                  Text("AAAAA"),
+                  Text("AAAAA"),
+                  Text("AAAAA"),
+                  Text("AAAAA"),
+                  Text("AAAAA"),
+                  Text("AAAAA"),
+                  Text("AAAAA"),
+                  Text("AAAAA"),
+                  Text("AAAAA"),
+                  Text("AAAAA"),
+                  Text("AAAAA"),
+                  Text("AAAAA"),
+                  Text("AAAAA"),
+                  Text("AAAAA"),
+                  Text("AAAAA"),
+                  Text("AAAAA"),
+                  Text("AAAAA"),
+                  Text("AAAAA"),
+                  Text("AAAAA"),
+                  Text("AAAAA"),
+                  Text("AAAAA"),
+                  Text("AAAAA"),
+                  Text("AAAAA"),
+                  Text("AAAAA"),
+                  Text("AAAAA"),
+                  Text("AAAAA"),
+                  Text("AAAAA"),
+                  Text("AAAAA"),
+                  Text("AAAAA"),
+                  Text("AAAAA"),
+                  Text("AAAAA"),
+                  Text("AAAAA"),
+                  Text("AAAAA"),
+                  Text("AAAAA"),
+                  Text("AAAAA"),
+                  Text("AAAAA"),
+                  Text("AAAAA"),
+                  Text("AAAAA"),
+                ],
               ),
             )
           ],
