@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:widget_array/otherScreen.dart';
 
 class second1 extends StatefulWidget {
   @override
@@ -31,70 +32,17 @@ class _secondState1 extends State<second1> {
         body: Column(
           children: <Widget>[
             RaisedButton(
-              onPressed: () {},
+              onPressed: () {
+                sss();
+              },
               child: Text("Add Widget"),
             ),
             Container(
               color: Colors.redAccent,
-              height: query.height - 100,
+              height: query.height - 200,
               child: ListView(
                 scrollDirection: Axis.vertical,
-                children: <Widget>[
-                  Text("AAAAA"),
-                  Text("AAAAA"),
-                  Text("AAAAA"),
-                  Text("AAAAA"),
-                  Text("AAAAA"),
-                  Text("AAAAA"),
-                  Text("AAAAA"),
-                  Text("AAAAA"),
-                  Text("AAAAA"),
-                  Text("AAAAA"),
-                  Text("AAAAA"),
-                  Text("AAAAA"),
-                  Text("AAAAA"),
-                  Text("AAAAA"),
-                  Text("AAAAA"),
-                  Text("AAAAA"),
-                  Text("AAAAA"),
-                  Text("AAAAA"),
-                  Text("AAAAA"),
-                  Text("AAAAA"),
-                  Text("AAAAA"),
-                  Text("AAAAA"),
-                  Text("AAAAA"),
-                  Text("AAAAA"),
-                  Text("AAAAA"),
-                  Text("AAAAA"),
-                  Text("AAAAA"),
-                  Text("AAAAA"),
-                  Text("AAAAA"),
-                  Text("AAAAA"),
-                  Text("AAAAA"),
-                  Text("AAAAA"),
-                  Text("AAAAA"),
-                  Text("AAAAA"),
-                  Text("AAAAA"),
-                  Text("AAAAA"),
-                  Text("AAAAA"),
-                  Text("AAAAA"),
-                  Text("AAAAA"),
-                  Text("AAAAA"),
-                  Text("AAAAA"),
-                  Text("AAAAA"),
-                  Text("AAAAA"),
-                  Text("AAAAA"),
-                  Text("AAAAA"),
-                  Text("AAAAA"),
-                  Text("AAAAA"),
-                  Text("AAAAA"),
-                  Text("AAAAA"),
-                  Text("AAAAA"),
-                  Text("AAAAA"),
-                  Text("AAAAA"),
-                  Text("AAAAA"),
-                  Text("AAAAA"),
-                ],
+                children: addWidgetInside,
               ),
             )
           ],
@@ -115,6 +63,9 @@ class _addAllState extends State<addAll> {
     return new RaisedButton(
       onPressed: () {
         print("Num : " + widget._num.toString());
+
+        Navigator.of(context).push(
+            MaterialPageRoute(builder: (context) => otherScreen(widget._num)));
       },
       child: Text("Click Value ${widget._num}"),
     );
